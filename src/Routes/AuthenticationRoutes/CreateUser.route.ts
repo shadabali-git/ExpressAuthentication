@@ -4,6 +4,6 @@ const router=express.Router();
 
 
 
-    router.route('/create-user').post(CreateUserController);
+    router.route('/user').post(CreateUserController);
 
 export default router
