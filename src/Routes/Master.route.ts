@@ -1,6 +1,6 @@
-import express,{Router} from 'express'
+import {Router} from 'express'
 
-const route:Router=express.Router();
+const route:Router=Router();
 
 import CreateUserRoute from "./AuthenticationRoutes/CreateUser.route";
 import DeleteUserRoute from "./AuthenticationRoutes/DeleteUser.route";
