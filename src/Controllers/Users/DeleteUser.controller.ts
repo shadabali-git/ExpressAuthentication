@@ -3,13 +3,9 @@ import deleteUserService from "../../services/Authentication/DeleteUser.service"
 
 const DeleteUserController = async (req: Request, res: Response) => {
     try {
-        const {username} = req.params;
-        if(!username){
-            res.status(404).json({message:'Username Not Found'})
-            return;
-        }
+        const {userId} = req.params;
 
-        await deleteUserService(username);
+        await deleteUserService(userId);
         res.status(200).json({message: "Deleted Successfully"})
     } catch (e) {
         console.log("user Deletion Issue ", e);

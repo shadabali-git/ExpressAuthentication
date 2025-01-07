@@ -1,10 +1,10 @@
 import UserModel from "../../Models/User.model";
 
-const deleteUserService=async (username:string)=>{
+const deleteUserService=async (userId:string)=>{
     try{
-          const res=await UserModel.deleteOne({username:username});
+          const res=await UserModel.deleteOne({_id:userId});
         if (res.deletedCount === 0) {
-            throw new Error("Cannot find username")
+            throw new Error("Cannot find userid")
         }
           return res;
     }
