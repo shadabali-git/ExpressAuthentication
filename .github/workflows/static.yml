@@ -2,12 +2,11 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
-    branches: 
-        - main  # Runs the action on every push to the main branch
-  workflow_dispatch:  # Allows manual triggering from the GitHub Actions tab
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -23,35 +22,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js for the build
+      # Step 2: Set up Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-              node-version: '20'
-              registry-url: 'https://registry.npmjs.org'
-      # Step 3: Navigate to the frontend folder
-      - name: Change directory to frontend
-        run: cd frontend
+          node-version: '22'  # Adjust this if your project requires a different version
 
-      # Step 4: Install dependencies
+      # Step 3: Navigate to frontend and install dependencies
       - name: Install dependencies
+        working-directory: ./frontend
         run: npm install
 
-      # Step 5: Build the Vite app
+      # Step 4: Build the project
       - name: Build Vite app
-        run: npm run build  # This creates the build in the 'dist' folder inside 'frontend'
+        working-directory: ./frontend
+        run: npm run build
 
-      # Step 6: Configure GitHub Pages
+      # Step 5: Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Step 7: Upload the build output to GitHub Pages
+      # Step 6: Upload the build output to GitHub Pages
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './frontend/dist'  # Path to the 'dist' folder inside 'frontend'
+          path: './frontend/dist'
 
-      # Step 8: Deploy the built app to GitHub Pages
+      # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
