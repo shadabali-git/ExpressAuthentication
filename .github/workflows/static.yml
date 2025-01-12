@@ -2,11 +2,12 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # Runs the action on every push to the main branch
+    branches: 
+        - main  # Runs the action on every push to the main branch
   workflow_dispatch:  # Allows manual triggering from the GitHub Actions tab
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,10 +25,10 @@ jobs:
 
       # Step 2: Set up Node.js for the build
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'  # Adjust Node.js version as per your project requirement
-
+              node-version: '20'
+              registry-url: 'https://registry.npmjs.org'
       # Step 3: Navigate to the frontend folder
       - name: Change directory to frontend
         run: cd frontend
@@ -46,7 +47,7 @@ jobs:
 
       # Step 7: Upload the build output to GitHub Pages
       - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './frontend/dist'  # Path to the 'dist' folder inside 'frontend'
 
