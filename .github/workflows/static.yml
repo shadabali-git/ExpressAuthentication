@@ -2,16 +2,14 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # This runs the action on every push to the main branch
-  workflow_dispatch:  # Allows you to run the workflow manually from the GitHub Actions tab
+    branches: ["main"]  # Runs the action on every push to the main branch
+  workflow_dispatch:  # Allows manual triggering from the GitHub Actions tab
 
-# Define permissions for the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Prevent multiple deployments at once by only allowing one deployment at a time
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -28,32 +26,35 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Use the Node.js version required for your project
+          node-version: '16'  # Adjust Node.js version as per your project requirement
 
-      # Step 3: Install dependencies using npm
+      # Step 3: Navigate to the frontend folder
+      - name: Change directory to frontend
+        run: cd frontend
+
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build the Vite app
+      # Step 5: Build the Vite app
       - name: Build Vite app
-        run: npm run build  # This assumes your build script is `npm run build`
+        run: npm run build  # This creates the build in the 'dist' folder inside 'frontend'
 
-      # Step 5: Configure GitHub Pages
+      # Step 6: Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Step 6: Upload the build output to GitHub Pages
+      # Step 7: Upload the build output to GitHub Pages
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'  # Vite generates the build in the 'dist' directory by default
+          path: './frontend/dist'  # Path to the 'dist' folder inside 'frontend'
 
-      # Step 7: Deploy the built app to GitHub Pages
+      # Step 8: Deploy the built app to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
-    # This environment name and URL output can be used in later steps
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
