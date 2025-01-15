@@ -17,20 +17,22 @@ const Auth: React.FC = () => {
 
         setFormData({...formData,[e.target.name]: e.target.value})
     }
-    const handleSubmit = async () => {
-
+    const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+          e.preventDefault()
         if (!isLogin) {
             const registerResponse = await axios.post('http://localhost:8080/api/v1/create/user', {
                 email: formData.email,
-                password: formData.password
+                password: formData.password,
+                username:formData.name
             })
             if (registerResponse) {
+                setFormData({name:'',email:'',password:''})
                 setIsLogin(true);
             }
 
         } else {
 
-            navigate('/')
+            navigate('/ExpressAuthentication')
         }
 
     }
