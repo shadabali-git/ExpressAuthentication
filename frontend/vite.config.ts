@@ -4,8 +4,6 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
-  base: 'https://shadabaligithub.github.io/ExpressAuthentication',
-   // base:"/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

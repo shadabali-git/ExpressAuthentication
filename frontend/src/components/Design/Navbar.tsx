@@ -13,10 +13,8 @@ const Navbar = () => {
     return (
         <nav className="bg-white shadow-md w-full">
             <div className="container mx-auto flex items-center justify-between p-4">
-                {/* Logo Section */}
-                <div className="text-xl font-bold text-primary">MyWebsite</div>
 
-                {/* Navigation Links */}
+                <div className="text-xl font-bold text-primary"> Keep Secret  </div>
                 <div className="hidden md:flex space-x-6">
                     {navItems.map((item) => (
                         <NavLink
@@ -36,7 +34,7 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Action Buttons (Optional) */}
+
                 <div className="hidden md:flex space-x-4">
                     <Button variant="outline" size="sm">
                         Log In
