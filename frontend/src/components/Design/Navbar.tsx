@@ -1,14 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import React from "react";
 
-const Navbar = () => {
+interface DialogComponentProps {
+    setOpen:  React.Dispatch<React.SetStateAction<boolean>>;
+    setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
     const navItems = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Services", path: "/services" },
         { name: "Contact", path: "/contact" },
     ];
+
+    //  function to open Login Dialog
+    const openLoginDialog = () => {
+          setIsLogin(true);
+          setOpen(true);
+    };
+    //  function to open Register Dialog
+    const openRegisterDialog = () => {
+          setIsLogin(false);
+          setOpen(true);
+    };
+
+
 
     return (
         <nav className="bg-white shadow-md w-full">
@@ -36,16 +55,14 @@ const Navbar = () => {
 
 
                 <div className="hidden md:flex space-x-4">
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline" size="sm" onClick={openLoginDialog}>
                         Log In
                     </Button>
-                    <Button size="sm">Sign Up</Button>
+                    <Button size="sm" onClick={openRegisterDialog}>Sign Up </Button >
                 </div>
 
-                {/* Mobile Menu (Hamburger) */}
                 <div className="md:hidden">
                     <Button variant="ghost" size="icon">
-                        {/* Add an icon, e.g., a hamburger menu icon */}
                         <span className="sr-only">Toggle Menu</span>☰
                     </Button>
                 </div>
