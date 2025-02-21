@@ -51,6 +51,8 @@ const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,se
                     username: formData.name
                 })
                 if (registerResponse) {
+                    const token=registerResponse.data.token;
+                    localStorage.setItem('token',token)
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Success","Account Created","success")
@@ -68,6 +70,8 @@ const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,se
                     password: formData.password
                 })
                 if (loginResponse) {
+                    const token=loginResponse.data.token;
+                    localStorage.setItem('token',token)
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Login Success","","success")

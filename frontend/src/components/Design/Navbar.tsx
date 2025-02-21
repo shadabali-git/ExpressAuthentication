@@ -2,6 +2,8 @@ import { NavLink} from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import React from "react";
+import {useSelector} from "react-redux";
+import {UserDetailsState} from "@/redux/features/UserDetailsSlice.ts";
 
 interface DialogComponentProps {
     setOpen:  React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,6 +11,9 @@ interface DialogComponentProps {
 }
 
 const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
+
+    const userDetail = useSelector((state:UserDetailsState) => state.userDetails?.name);
+    console.log(userDetail);
     const navItems = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
@@ -52,8 +57,14 @@ const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
                         </NavLink>
                     ))}
                 </div>
-
-
+                {userDetail?
+                    (<div>
+                        <Button variant="outline" size="sm">
+                            {userDetail}
+                        </Button>
+                    </div>
+                    ):(
+                  <>
                 <div className="hidden md:flex space-x-4">
                     <Button variant="outline" size="sm" onClick={openLoginDialog}>
                         Log In
@@ -66,6 +77,8 @@ const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
                         <span className="sr-only">Toggle Menu</span>☰
                     </Button>
                 </div>
+                  </>
+                    )}
             </div>
         </nav>
     );
