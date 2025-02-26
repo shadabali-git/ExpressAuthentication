@@ -1,0 +1,10 @@
+"use strict";
+var _a, _b, _c;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JWT_Expires = exports.JWT_Secret = exports.MongoURL = exports.PORT = void 0;
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+exports.PORT = process.env.PORT;
+exports.MongoURL = (_a = process.env.MONGO_URL) !== null && _a !== void 0 ? _a : 'mongodb://localhost:27017';
+exports.JWT_Secret = (_b = process.env.JWT_SECRET) !== null && _b !== void 0 ? _b : 'secret';
+exports.JWT_Expires = (_c = process.env.JWT_EXPIRES_IN) !== null && _c !== void 0 ? _c : '1h';

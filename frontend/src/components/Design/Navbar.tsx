@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import React from "react";
 import {useSelector} from "react-redux";
-import {UserDetailsState} from "@/redux/features/UserDetailsSlice.ts";
 
 interface DialogComponentProps {
     setOpen:  React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,8 +11,8 @@ interface DialogComponentProps {
 
 const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
 
-    const userDetail = useSelector((state:UserDetailsState) => state.userDetails?.name);
-    console.log(userDetail);
+    const userDetail = useSelector((state:any) => state.userDetails.userDetails);
+
     const navItems = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
@@ -21,7 +20,7 @@ const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
         { name: "Contact", path: "/contact" },
     ];
 
-    //  function to open Login Dialog
+
     const openLoginDialog = () => {
           setIsLogin(true);
           setOpen(true);
@@ -39,7 +38,10 @@ const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
             <div className="container mx-auto flex items-center justify-between p-4">
 
                 <div className="text-xl font-bold text-primary"> Keep Secret  </div>
-                <div className="hidden md:flex space-x-6">
+                {userDetail?
+                    (
+                        <>
+                        <div className="hidden md:flex space-x-6">
                     {navItems.map((item) => (
                         <NavLink
                             key={item.path}
@@ -57,13 +59,12 @@ const Navbar:React.FC<DialogComponentProps > = ({setOpen,setIsLogin}) => {
                         </NavLink>
                     ))}
                 </div>
-                {userDetail?
-                    (<div>
+               <div>
                         <Button variant="outline" size="sm">
-                            {userDetail}
+                            {userDetail.username}
                         </Button>
                     </div>
-                    ):(
+                        </>):(
                   <>
                 <div className="hidden md:flex space-x-4">
                     <Button variant="outline" size="sm" onClick={openLoginDialog}>

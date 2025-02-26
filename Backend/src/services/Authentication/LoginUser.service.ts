@@ -18,7 +18,7 @@ const loginUserService=async (email:string|undefined,password:string|undefined)=
             return { success: false, message: "Password does not match" };
         }
 
-        return { success: true, message: "Login successful",token:generateToken(user)};
+        return { success: true, message: "Login successful",token:generateToken(user),userDetails:user };
     }
     catch (e){
         console.log('User login Service error',e)

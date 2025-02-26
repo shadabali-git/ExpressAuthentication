@@ -2,11 +2,14 @@ import React, {useState} from "react";
 import {Button} from "@/components/ui/button.tsx"
 import {Input} from "@/components/ui/input.tsx"
 import { Cross2Icon } from "@radix-ui/react-icons";
+import {useNavigate} from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import * as Dialog  from "@radix-ui/react-dialog";
 import Swal from 'sweetalert2'
 
 import axios from 'axios'
+import {useDispatch} from "react-redux";
+import {setUserDetails} from "@/redux/features/UserDetailsSlice.ts";
 
 interface DialogComponentProps {
     open: boolean;
@@ -15,8 +18,9 @@ interface DialogComponentProps {
     setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,setIsLogin}) => {
-
+    const  navigate=useNavigate();
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const dispatch= useDispatch()
     const showAlert = (title:string,message:string,icon:"success"|"error") => {
         Swal.fire({
             title: title,
@@ -56,6 +60,7 @@ const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,se
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Success","Account Created","success")
+                    navigate('/')
                 }
             }catch (e) {
                 console.log(e)
@@ -72,9 +77,11 @@ const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,se
                 if (loginResponse) {
                     const token=loginResponse.data.token;
                     localStorage.setItem('token',token)
+                    dispatch(setUserDetails(loginResponse.data.userDetails))
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Login Success","","success")
+                    navigate('/')
                 }
             }catch (e) {
                 console.log(e)
