@@ -26,7 +26,7 @@ const ProtectiveRoute:React.FC<{children:React.ReactNode}>=({children})=>{
 
         const callUserDate = async (token: string) => {
             try {
-                const userResponse = await axios.get('http://localhost:8080/api/v1/get/user', {
+                const userResponse = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/get/user`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'authorization': `Bearer ${token}`

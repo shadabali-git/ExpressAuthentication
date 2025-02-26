@@ -49,7 +49,7 @@ const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,se
         if (!isLogin) {
             console.log('first step')
             try {
-                const registerResponse = await axios.post('http://localhost:8080/api/v1/create/user', {
+                const registerResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/create/user`, {
                     email: formData.email,
                     password: formData.password,
                     username: formData.name
@@ -70,7 +70,7 @@ const AuthDialogue:React.FC<DialogComponentProps> = ({ open, setOpen ,isLogin,se
         } else {
             try{
 
-                const loginResponse = await axios.post('http://localhost:8080/api/v1/login/user', {
+                const loginResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/login/user`, {
                     email: formData.email,
                     password: formData.password
                 })
