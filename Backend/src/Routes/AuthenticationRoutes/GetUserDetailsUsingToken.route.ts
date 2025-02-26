@@ -1,6 +1,7 @@
 import {Request, Response, Router} from "express";
 import {JWT_Secret} from "../../config/environment"
 import jwt from "jsonwebtoken";
+import UserModel from "../../Models/User.model";
 const router = Router();
 
 router.get('/user', async (req: Request, res: Response) => {
@@ -9,7 +10,8 @@ router.get('/user', async (req: Request, res: Response) => {
         if (token) {
             const decoded: any = jwt.verify(token, JWT_Secret);
             if (decoded) {
-                res.status(200).json({userDetails: decoded});
+                const user = await UserModel.findOne({email: decoded.email});
+                res.status(200).json({userDetails: user});
             }
         } else {
             res.status(401).json({message: 'Unauthorized'})
