@@ -3,5 +3,7 @@ node_modules
 .vscode
 .env
 /build
+../.idea
+../.github
 ```
 frontend/node_modules
