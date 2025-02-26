@@ -9,9 +9,11 @@ export interface User{
 }
 export interface UserDetailsState{
     userDetails:User|null
+    Loading:boolean
 }
 const initialState: UserDetailsState = {
     userDetails: null,
+    Loading:false
 };
 
 export const UserDetailsSlice = createSlice({
@@ -21,7 +23,10 @@ export const UserDetailsSlice = createSlice({
         setUserDetails: (state, action:PayloadAction<User|null>) => {
             state.userDetails = action.payload;
         },
+        setLoading: (state, action:PayloadAction<boolean>) => {
+            state.Loading = action.payload;
+        }
     },
 });
-export const { setUserDetails } = UserDetailsSlice.actions;
+export const { setUserDetails ,setLoading} = UserDetailsSlice.actions;
 export default UserDetailsSlice.reducer;

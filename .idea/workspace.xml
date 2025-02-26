@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SHADABALIGITHUB&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SHADABALIGITHUB/04.Practice_webPage_Netwings.git&quot;,
+    &quot;accountId&quot;: &quot;8f347a30-4623-47eb-a96d-e69859db3583&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2qo1tcxE6KlVzJtClA5pKK0bp1Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/shad4/Sublime/shaddycracker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\shad4\\WebstormProjects\\AuthenticationExpress\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shad4\WebstormProjects\AuthenticationExpress\frontend\src\assets" />
+      <recent name="C:\Users\shad4\WebstormProjects\Backend\Backend" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="" />
+      <created>1735314330096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735314330096</updated>
+      <workItem from="1735314332083" duration="4628000" />
+      <workItem from="1735359159673" duration="4833000" />
+      <workItem from="1735376052170" duration="9180000" />
+      <workItem from="1735391425307" duration="4302000" />
+      <workItem from="1735409073678" duration="2900000" />
+      <workItem from="1735455741098" duration="9001000" />
+      <workItem from="1735490979945" duration="3203000" />
+      <workItem from="1735499240508" duration="733000" />
+      <workItem from="1735544632241" duration="6808000" />
+      <workItem from="1735639498442" duration="14000" />
+      <workItem from="1736267944109" duration="785000" />
+      <workItem from="1736665471257" duration="626000" />
+      <workItem from="1736670590551" duration="1962000" />
+      <workItem from="1736678586050" duration="98000" />
+      <workItem from="1736681922063" duration="1165000" />
+      <workItem from="1736782745458" duration="72000" />
+      <workItem from="1736782928327" duration="59000" />
+      <workItem from="1736853985422" duration="5707000" />
+      <workItem from="1736936492941" duration="26000" />
+      <workItem from="1736948345864" duration="3855000" />
+      <workItem from="1737225144481" duration="39000" />
+      <workItem from="1737813804600" duration="57000" />
+      <workItem from="1737917565352" duration="646000" />
+      <workItem from="1737972548416" duration="90000" />
+      <workItem from="1738866317366" duration="210000" />
+      <workItem from="1738866944157" duration="711000" />
+      <workItem from="1739890476921" duration="115000" />
+      <workItem from="1739890632891" duration="35000" />
+      <workItem from="1739890758182" duration="5463000" />
+      <workItem from="1740029130779" duration="14247000" />
+      <workItem from="1740159554212" duration="17652000" />
+      <workItem from="1740298712636" duration="664000" />
+      <workItem from="1740518476747" duration="1862000" />
+      <workItem from="1740577692563" duration="8448000" />
+      <workItem from="1740590206520" duration="3724000" />
+    </task>
+    <task id="LOCAL-00001" summary="Authentication In Typescript Added">
+      <option name="closed" value="true" />
+      <created>1735377470104</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735377470104</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added a Delete user">
+      <option name="closed" value="true" />
+      <created>1735386222817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735386222817</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added token middleware and token sending on Registration/creation">
+      <option name="closed" value="true" />
+      <created>1735463254348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735463254348</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added a frontend folder in backend with vite,tailwind,shadcn">
+      <option name="closed" value="true" />
+      <created>1736681997069</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736681997069</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;frontend/vite.config.ts">
+      <option name="closed" value="true" />
+      <created>1736682941106</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736682941106</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added new base">
+      <option name="closed" value="true" />
+      <created>1736949592716</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736949592716</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Authentication In Typescript Added" />
+    <MESSAGE value="Added a Delete user" />
+    <MESSAGE value="Added token middleware and token sending on Registration/creation" />
+    <MESSAGE value="added a frontend folder in backend with vite,tailwind,shadcn" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;frontend/vite.config.ts" />
+    <MESSAGE value="added new base" />
+    <MESSAGE value="merged" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged" />
+  </component>
+</project>
