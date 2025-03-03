@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Screens/GamePlayScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Design/Board.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +118,15 @@
       <workItem from="1740298712636" duration="664000" />
       <workItem from="1740518476747" duration="1862000" />
       <workItem from="1740577692563" duration="8448000" />
-      <workItem from="1740590206520" duration="3724000" />
+      <workItem from="1740590206520" duration="6433000" />
+      <workItem from="1740659097084" duration="9000" />
+      <workItem from="1740664573697" duration="917000" />
+      <workItem from="1740756102384" duration="5206000" />
+      <workItem from="1740761408924" duration="10000" />
+      <workItem from="1740761456367" duration="190000" />
+      <workItem from="1740769823818" duration="263000" />
+      <workItem from="1740801110785" duration="47000" />
+      <workItem from="1740962933040" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />
