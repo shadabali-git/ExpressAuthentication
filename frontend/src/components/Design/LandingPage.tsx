@@ -1,7 +1,19 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import ImageGame from '../../assets/game.webp'
 import {Button} from '../ui/button';
+import axios from "axios";
 const LandingPage:React.FC=()=>{
+    const startRender = async () => {
+        try {
+            await axios.get(import.meta.env.VITE_RENDER_START, { timeout: 5000 });
+        } catch (error) {
+            console.error("Failed to trigger Render start:", error);
+        }
+    };
+
+    useEffect(() => {
+        startRender();
+    }, []);
          return (
             <div className="min-h-screen font-sans mb-4">
                 <main>

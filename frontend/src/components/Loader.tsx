@@ -1,12 +1,12 @@
 import React from 'react'
 interface LoaderProps {
-    width: number|null;
-    height: number|null;
+    width?: number|null;
+    height?: number|null;
 }
-const Loader :React.FC<LoaderProps>=({width ,height})=>{
+const Loader :React.FC<LoaderProps>=()=>{
     return (
         <div
-            className={`${width?`w-${width}`:"w-screen"} ${height?`h-${height}`:"h-screen"} overflow-hidden flex justify-center items-center`}>
+            className={`w-96 h-96 overflow-hidden flex justify-center items-center`}>
 
             <div className="absolute w-24 h-24 border-2 border-blue-700 transition-all animate-spin rounded-full">
             </div>

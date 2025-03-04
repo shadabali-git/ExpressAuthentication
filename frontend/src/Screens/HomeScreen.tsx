@@ -7,7 +7,9 @@ const HomeScreen: React.FC = () => {
 
 
     if(isLoading){
-        return <Loader/>
+        return <div>
+            <Loader />
+           </div>
 
     }
     return (
