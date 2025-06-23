@@ -14,6 +14,8 @@ import AuthGoogleCallbackRoute from "./Routes/GoogleOAuth/AuthGoogleCallback.rou
 
 const port = PORT ?? 3000;
 const app = express();
+app.set('trust proxy', true);
+
 
 // middleware
 app.use(express.json())

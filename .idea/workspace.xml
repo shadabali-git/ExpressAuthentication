@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,7 @@
       <workItem from="1743821954324" duration="808000" />
       <workItem from="1745888620362" duration="508000" />
       <workItem from="1745932093544" duration="37000" />
-      <workItem from="1750703638624" duration="11075000" />
+      <workItem from="1750703638624" duration="12431000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />
