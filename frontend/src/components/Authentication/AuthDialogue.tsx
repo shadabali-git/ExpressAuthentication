@@ -86,7 +86,7 @@ const AuthDialogue: React.FC<DialogComponentProps> = ({open, setOpen, isLogin, s
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Login Success", "", "success")
-                    navigate('/')
+                    navigate("/about")
                 }
             } catch (e) {
                 console.log(e)

@@ -1,8 +1,10 @@
 import {NavLink} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
+import {Button} from "../ui/button";
+import {cn} from "@/lib/utils.ts";
 import React from "react";
-import {useSelector} from "react-redux";
+import { useAppSelector, useAppDispatch } from "@/hooks/redux"
+import { clearUserData } from "@/redux/features/UserDetailsSlice.ts"
+import { authService } from "@/lib/authService.ts"
 
 interface DialogComponentProps {
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,9 +12,13 @@ interface DialogComponentProps {
 }
 
 const Navbar: React.FC<DialogComponentProps> = ({setOpen, setIsLogin}) => {
-
-    const userDetail = useSelector((state: any) => state.userDetails.userDetails);
-
+    // const navigate = useNavigate()
+    const { userDetails } = useAppSelector((state) => state.userDetails)
+    const dispatch = useAppDispatch()
+    console.log("User Data : ",userDetails)
+    const handleLogout = () => {
+        dispatch(clearUserData())
+    }
     const navItems = [
         {name: "Home", path: "/"},
         {name: "About", path: "/about"},
@@ -31,16 +37,15 @@ const Navbar: React.FC<DialogComponentProps> = ({setOpen, setIsLogin}) => {
         setOpen(true);
     };
     const GoogleSignIn = () => {
-        window.location.href = `${import.meta.env.VITE_BACKEND_URL}/auth/google`
+        window.location.href = authService.getGoogleAuthUrl()
+
     }
-
-
     return (
         <nav className="bg-white shadow-md w-full">
             <div className="container mx-auto flex items-center justify-between p-4">
 
                 <div className="text-xl font-bold text-primary"> Keep Secret</div>
-                {userDetail ?
+                {userDetails ?
                     (
                         <>
                             <div className="hidden md:flex space-x-6">
@@ -61,21 +66,22 @@ const Navbar: React.FC<DialogComponentProps> = ({setOpen, setIsLogin}) => {
                                     </NavLink>
                                 ))}
                             </div>
-                            <div>
+                            <div className="flex gap-2">
                                 <Button variant="outline" size="sm">
-                                    {userDetail.username}
+                                    {userDetails.username}
                                 </Button>
+                                <Button variant="outline" size="sm" onClick={handleLogout}>Logout</Button>
                             </div>
                         </>) : (
                         <>
                             <div className="hidden md:flex space-x-4">
                                 <Button variant="outline" size="sm" className="gap-0" onClick={GoogleSignIn}>
-                                    <span className="p-0 m-0 text-blue-600" >G</span>
-                                    <span className="p-0 m-0 text-red-600" >o</span>
-                                    <span className="p-0 m-0 text-yellow-600" >o</span>
-                                    <span className="p-0 m-0 text-blue-600" >g</span>
-                                    <span className="p-0 m-0 text-green-600" >l</span>
-                                    <span className="p-0 m-0 text-red-600" >e</span>
+                                    <span className="p-0 m-0 text-blue-600">G</span>
+                                    <span className="p-0 m-0 text-red-600">o</span>
+                                    <span className="p-0 m-0 text-yellow-600">o</span>
+                                    <span className="p-0 m-0 text-blue-600">g</span>
+                                    <span className="p-0 m-0 text-green-600">l</span>
+                                    <span className="p-0 m-0 text-red-600">e</span>
                                 </Button>
                                 <Button variant="outline" size="sm" onClick={openLoginDialog}>
                                     Log In

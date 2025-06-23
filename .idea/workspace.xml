@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
+      <change afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/GoogleOAuthCallback.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/LinkGoogleAccount.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/Routes/AuthenticationRoutes/LinkGoogleAccount.route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/Routes/GoogleOAuth/AuthGoogle.route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/Routes/GoogleOAuth/AuthGoogleCallback.route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/config/passport.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/GetUserByGoogleId.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/GoogleOAuth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/oauth-callback.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/redux.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/lib/authService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.sample" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env.sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Models/User.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Models/User.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Routes/Master.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Routes/Master.route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/config/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/config/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/services/Authentication/createUser.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/createUser.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/types/UserType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/types/UserType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +52,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/SHADABALIGITHUB/04.Practice_webPage_Netwings.git&quot;,
-    &quot;accountId&quot;: &quot;8f347a30-4623-47eb-a96d-e69859db3583&quot;
+    &quot;accountId&quot;: &quot;dd13a2b7-ce41-447d-9c50-1b9568e5955d&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -50,14 +73,14 @@
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/shad4/Sublime/shaddycracker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/shad4/WebstormProjects/AuthenticationExpress&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\shad4\\WebstormProjects\\AuthenticationExpress\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\shad4\\WebstormProjects\\AuthenticationExpress\\Backend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -126,7 +149,17 @@
       <workItem from="1740801110785" duration="47000" />
       <workItem from="1740962933040" duration="2642000" />
       <workItem from="1740994008672" duration="2504000" />
-      <workItem from="1741084688529" duration="395000" />
+      <workItem from="1741084688529" duration="1781000" />
+      <workItem from="1741113279387" duration="10203000" />
+      <workItem from="1741347252669" duration="9000" />
+      <workItem from="1741358798450" duration="1336000" />
+      <workItem from="1741800051992" duration="219000" />
+      <workItem from="1743492173286" duration="10916000" />
+      <workItem from="1743821641522" duration="201000" />
+      <workItem from="1743821954324" duration="808000" />
+      <workItem from="1745888620362" duration="508000" />
+      <workItem from="1745932093544" duration="37000" />
+      <workItem from="1750703638624" duration="9390000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />
