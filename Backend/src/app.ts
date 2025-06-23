@@ -18,7 +18,11 @@ const app = express();
 // middleware
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: [
+        'http://localhost:5173',
+        'https://keep.shadab.works',
+        'https://express-authentication-henna.vercel.app'
+    ],
     credentials: true
 }));
 app.use(bodyparser.urlencoded({extended: true}));

@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
-      <change afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/GoogleOAuthCallback.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/LinkGoogleAccount.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/Routes/AuthenticationRoutes/LinkGoogleAccount.route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/Routes/GoogleOAuth/AuthGoogle.route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/Routes/GoogleOAuth/AuthGoogleCallback.route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/config/passport.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/GetUserByGoogleId.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/GoogleOAuth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/oauth-callback.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/redux.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/lib/authService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env.sample" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Models/User.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Models/User.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Routes/Master.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Routes/Master.route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/config/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/config/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/services/Authentication/createUser.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/createUser.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/types/UserType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/types/UserType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/ProtectiveRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/features/UserDetailsSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +133,7 @@
       <workItem from="1743821954324" duration="808000" />
       <workItem from="1745888620362" duration="508000" />
       <workItem from="1745932093544" duration="37000" />
-      <workItem from="1750703638624" duration="9390000" />
+      <workItem from="1750703638624" duration="11075000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />
