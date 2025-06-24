@@ -1,9 +1,25 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import Loader from "@/components/Loader.tsx";
+import Swal from 'sweetalert2'
+
 const HomeScreen: React.FC = () => {
     const navigate = useNavigate();
-    const [isLoading, setIsLoading] = React.useState<boolean>(false);
+    const [isLoading, ] = React.useState<boolean>(false);
+    const showAlert = (title: string, message: string, icon: "success" | "error") => {
+        Swal.fire({
+            title: title,
+            text: message,
+            icon: icon,
+            timer: 3000,
+            timerProgressBar: true,
+            showConfirmButton: true,
+            allowOutsideClick: true,
+            allowEscapeKey: true,
+
+
+        });
+    };
 
 
     if(isLoading){
@@ -25,11 +41,11 @@ const HomeScreen: React.FC = () => {
                     </div>
                     <div className="md:w-1/2 flex flex-col items-center">
                         <h2 className="text-2xl font-semibold mb-4">Play Tic Tac Toe</h2>
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2" onClick={()=>navigate('/gameplay')}>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2" onClick={()=>showAlert("Wait few days","Working on this part","success")} >
                             Play Online
                         </button>
-                        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={()=>setIsLoading(true)}>
-                            Play With Computer
+                        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={()=>navigate('/gameplay')}>
+                            Play Offline
                         </button>
                     </div>
                 </div>
