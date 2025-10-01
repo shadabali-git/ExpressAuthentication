@@ -1,13 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
 import UserDetailsReducer from "@/redux/features/UserDetailsSlice.ts";
-import gameReducer from "@/redux/features/GameSlice.ts";
-import FriendsReducer from '@/redux/features/FriendsSlice';
 
 export const store = configureStore({
     reducer:{
         userDetails: UserDetailsReducer,
-        game:gameReducer,
-        friends: FriendsReducer,
     }
 })
 
