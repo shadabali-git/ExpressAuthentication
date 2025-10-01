@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import Loader from "@/components/Loader.tsx";
+import Loader from "@/components/Design/Loader.tsx";
 import Swal from 'sweetalert2'
 
 const HomeScreen: React.FC = () => {

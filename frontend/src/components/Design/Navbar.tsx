@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import {NavLink,useNavigate} from "react-router-dom";
 import {Button} from "../ui/button";
 import {cn} from "@/lib/utils.ts";
 import React from "react";
@@ -11,15 +11,17 @@ interface DialogComponentProps {
 }
 
 const Navbar: React.FC<DialogComponentProps> = ({setOpen, setIsLogin}) => {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const { userDetails } = useAppSelector((state) => state.userDetails)
     const dispatch = useAppDispatch()
     console.log("User Data : ",userDetails)
     const handleLogout = () => {
         dispatch(clearUserData())
+        localStorage.removeItem('token')
+        navigate("/")
     }
     const navItems = [
-        {name: "Home", path: "/"},
+        {name: "Home", path: "/dashboard"},
         {name: "About", path: "/about"},
         {name: "Services", path: "/services"},
         {name: "Contact", path: "/contact"},

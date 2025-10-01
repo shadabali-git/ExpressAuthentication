@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import {Outlet} from "react-router-dom";
+import {Outlet,useNavigate} from "react-router-dom";
 import Navbar from "./Navbar.tsx";
 import AuthDialogue from "@/components/Authentication/AuthDialogue.tsx";
 import {useDispatch} from "react-redux";
@@ -8,11 +8,16 @@ import axios from "axios";
 
 
 const Layout: React.FC = () => {
+    const navigate = useNavigate();
     const [open, setOpen] = React.useState(false);
     const [isLogin, setIsLogin] = useState<boolean>(true);
     const dispatch = useDispatch();
     useEffect(() => {
         const token = localStorage.getItem('token');
+        if(!token){
+            navigate('/');
+            return
+        }
         if (token) {
             dispatch(setToken(token));
             axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/get/user`, {
@@ -22,6 +27,7 @@ const Layout: React.FC = () => {
                 .catch(() => {
                     dispatch(clearUserData());
                     localStorage.removeItem('token');
+                    navigate('/');
                 });
         }
     }, []);

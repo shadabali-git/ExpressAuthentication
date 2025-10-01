@@ -1,12 +1,17 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import ImageGame from '../../assets/game.webp'
 import {useNavigate, useLocation} from "react-router-dom";
 import {Button} from '../ui/button';
+import Navbar from "@/components/Design/Navbar.tsx";
 import Swal from 'sweetalert2'
+import AuthDialogue from "@/components/Authentication/AuthDialogue.tsx";
 
 const LandingPage: React.FC = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const [open, setOpen] = useState(false);
+    const [isLogin, setIsLogin] = useState(false);
+
 
     const showAlert = (title: string, message: string, icon: "success" | "error") => {
         Swal.fire({
@@ -36,7 +41,7 @@ const LandingPage: React.FC = () => {
                 icon: "success",
                 timer: 1500,
                 showConfirmButton: false,
-            }).then(() => navigate("/Dashboard", { replace: true }));
+            }).then(() => navigate("/Dashboard", {replace: true}));
         } else {
             showAlert("Login Crashed", "Try Again ! Contact shad46243@gmail.com", "error")
         }
@@ -44,6 +49,7 @@ const LandingPage: React.FC = () => {
 
     return (
         <div className="min-h-screen font-sans mb-4">
+            <Navbar setOpen={setOpen} setIsLogin={setIsLogin}/>
             <main>
                 <section>
                     <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12">
@@ -99,6 +105,7 @@ const LandingPage: React.FC = () => {
                 </div>
 
             </main>
+            <AuthDialogue open={open} setOpen={setOpen} setIsLogin={setIsLogin} isLogin={isLogin}/>
 
         </div>
     );

@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 import {Loader2} from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
 import Swal from 'sweetalert2'
-import Loader from "@/components/Loader.tsx";
+import Loader from "@/components/Design/Loader.tsx";
 import axios from 'axios'
 import {useDispatch} from "react-redux";
 import {setUserDetails} from "@/redux/features/UserDetailsSlice.ts";
@@ -64,7 +64,7 @@ const AuthDialogue: React.FC<DialogComponentProps> = ({open, setOpen, isLogin, s
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Success", "Account Created", "success")
-                    navigate('/')
+                    navigate('/dashboard')
                 }
             } catch (e) {
                 console.log(e)
@@ -85,7 +85,7 @@ const AuthDialogue: React.FC<DialogComponentProps> = ({open, setOpen, isLogin, s
                     setFormData({name: '', email: '', password: ''})
                     setOpen(false);
                     showAlert("Login Success", "", "success")
-                    navigate("/about")
+                    navigate("/dashboard")
                 }
             } catch (e:any) {
                 // console.log(e.response.data)

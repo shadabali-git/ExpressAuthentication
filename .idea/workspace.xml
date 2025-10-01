@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
+      <change afterPath="$PROJECT_DIR$/frontend/vercel.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/GoogleOAuthCallback.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/GoogleOAuthCallback.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Loader.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +68,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shad4\WebstormProjects\AuthenticationExpress\frontend\src\components\Design" />
       <recent name="C:\Users\shad4\WebstormProjects\AuthenticationExpress\frontend\src\assets" />
       <recent name="C:\Users\shad4\WebstormProjects\Backend\Backend" />
     </key>
@@ -134,6 +144,8 @@
       <workItem from="1745932093544" duration="37000" />
       <workItem from="1750703638624" duration="13240000" />
       <workItem from="1750747970661" duration="8233000" />
+      <workItem from="1759100661583" duration="23859000" />
+      <workItem from="1759326354642" duration="3581000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />

@@ -79,7 +79,7 @@ const GoogleOAuthCallbackController = async (req: Request, res: Response) => {
         }
         const token = generateToken(AlreadyExistsInMongo);
 
-        return res.redirect(`${FrontEndURL}/landing?token=${token}`);
+        return res.redirect(`${FrontEndURL}/?token=${token}`);
     } catch
         (error: any) {
         // Handle Token exchange failure
