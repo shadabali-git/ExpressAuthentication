@@ -21,6 +21,7 @@ const Layout: React.FC = () => {
                 .then(res => dispatch(setUserDetails(res.data.userDetails)))
                 .catch(() => {
                     dispatch(clearUserData());
+                    localStorage.removeItem('token');
                 });
         }
     }, []);

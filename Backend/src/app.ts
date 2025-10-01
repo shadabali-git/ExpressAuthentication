@@ -1,10 +1,8 @@
 import express from 'express';
 import bodyparser from 'body-parser'
 import {mongo} from './config/mongo';
-import passport from "passport";
 import cors from 'cors'
 import {PORT} from './config/environment'
-import './config/passport';
 
 // routes
 import MasterRoute from './Routes/Master.route'
@@ -14,8 +12,7 @@ import AuthGoogleCallbackRoute from "./Routes/GoogleOAuth/AuthGoogleCallback.rou
 
 const port = PORT ?? 3000;
 const app = express();
-app.set('trust proxy', true);
-
+// app.set('trust proxy', tru e);
 
 // middleware
 app.use(express.json())
@@ -28,12 +25,11 @@ app.use(cors({
     credentials: true
 }));
 app.use(bodyparser.urlencoded({extended: true}));
-app.use(passport.initialize());
 
 // routes
 app.use("/api", MasterRoute);
-app.use('/auth/google', AuthGoogleRoute);
-app.use('/auth/google/callback', AuthGoogleCallbackRoute);
+app.use("/api/auth/google", AuthGoogleRoute);
+app.use("/api/auth/google/callback", AuthGoogleCallbackRoute);
 
 
 app.listen(port, async () => {

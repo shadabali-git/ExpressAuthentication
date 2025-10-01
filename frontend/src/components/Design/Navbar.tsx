@@ -4,7 +4,6 @@ import {cn} from "@/lib/utils.ts";
 import React from "react";
 import { useAppSelector, useAppDispatch } from "@/hooks/redux"
 import { clearUserData } from "@/redux/features/UserDetailsSlice.ts"
-import { authService } from "@/lib/authService.ts"
 
 interface DialogComponentProps {
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -37,8 +36,7 @@ const Navbar: React.FC<DialogComponentProps> = ({setOpen, setIsLogin}) => {
         setOpen(true);
     };
     const GoogleSignIn = () => {
-        window.location.href = authService.getGoogleAuthUrl()
-
+        window.location.href = `${import.meta.env.VITE_BACKEND_URL}/api/auth/google`;
     }
     return (
         <nav className="bg-white shadow-md w-full">

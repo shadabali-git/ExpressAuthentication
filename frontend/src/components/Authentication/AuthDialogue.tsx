@@ -52,7 +52,6 @@ const AuthDialogue: React.FC<DialogComponentProps> = ({open, setOpen, isLogin, s
         e.preventDefault()
         setIsLoading(true);
         if (!isLogin) {
-            console.log('first step')
             try {
                 const registerResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/create/user`, {
                     email: formData.email,
@@ -88,9 +87,13 @@ const AuthDialogue: React.FC<DialogComponentProps> = ({open, setOpen, isLogin, s
                     showAlert("Login Success", "", "success")
                     navigate("/about")
                 }
-            } catch (e) {
-                console.log(e)
-                showAlert("Something Wrong", "Login Failed", "error")
+            } catch (e:any) {
+                // console.log(e.response.data)
+                if(e.response?.data?.message) {
+                    showAlert("Login Failed", e.response.data.message, "error")
+                }else{
+                    showAlert("Something Wrong", "Login Failed", "error")
+                }
 
             }
 

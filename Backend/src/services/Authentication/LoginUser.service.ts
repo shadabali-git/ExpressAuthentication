@@ -15,7 +15,7 @@ const loginUserService=async (email:string|undefined,password:string|undefined)=
 
         const check=await bcrypt.compare(password,user.password)
         if(!check){
-            return { success: false, message: "Password does not match" };
+            return { success: false, message: "Try Google Login" };
         }
 
         return { success: true, message: "Login successful",token:generateToken(user),userDetails:user };
