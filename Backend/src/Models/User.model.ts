@@ -31,7 +31,7 @@ const UserSchema: Schema = new Schema<UserType>({
         type: String,
         required: false,
         default: function () {
-            return `https://avatar.iran.liara.run/username?username=${encodeURIComponent(this.username)}`;
+            return `https://avatar.iran.liara.run/username?username=${encodeURIComponent(this.username || 'incognito')}`;
         }
     },
     password: {
