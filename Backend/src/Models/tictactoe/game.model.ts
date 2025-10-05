@@ -8,8 +8,8 @@ interface gameType {
     gameType: string,
     board: Board,
     currentTurn: 1 | 2,
-    status: "pending" | "completed" | "in-progress";
-    winner: 0 | 1 | 2;
+    status: "pending" | "completed" | "init";
+    winner: 0 | 1 | 2 | 3 ;
     lastUpdate: Date
 }
 
@@ -39,12 +39,12 @@ const gameSchema: Schema = new Schema<gameType>({
     },
     status: {
         type: String,
-        enum: ["pending", "completed", "in-progress"],
-        default: "pending"
+        enum: ["pending", "completed", "init"],
+        default: "init"
     },
     winner: {
         type: Number,
-        enum: [0, 1, 2],
+        enum: [0, 1, 2, 3],
         default: 0
     },
     lastUpdate: {

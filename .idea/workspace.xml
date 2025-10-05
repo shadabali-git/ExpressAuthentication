@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
-      <change afterPath="$PROJECT_DIR$/frontend/vercel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/Controllers/tictactoe/BotVsHuman.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/services/ticktactoe/HumanMove.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Temp.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/GoogleOAuthCallback.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/GoogleOAuthCallback.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Controllers/tictactoe/MachineVsHuman.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Models/tictactoe/game.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Models/tictactoe/game.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Routes/tictactoe/responseAi.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Routes/tictactoe/responseAi.route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/services/ticktactoe/AiResponseOnHumanMove.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/ticktactoe/BotMoves.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/services/ticktactoe/createNewGame.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/ticktactoe/createNewGame.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/services/ticktactoe/minimaxAlgo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/ticktactoe/minimaxAlgo.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Authentication/AuthDialogue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/Loader.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shadab&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/shad4/WebstormProjects/AuthenticationExpress&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -145,7 +146,12 @@
       <workItem from="1750703638624" duration="13240000" />
       <workItem from="1750747970661" duration="8233000" />
       <workItem from="1759100661583" duration="23859000" />
-      <workItem from="1759326354642" duration="3581000" />
+      <workItem from="1759326354642" duration="8022000" />
+      <workItem from="1759413344141" duration="16759000" />
+      <workItem from="1759463535770" duration="1470000" />
+      <workItem from="1759468920382" duration="864000" />
+      <workItem from="1759519099188" duration="2840000" />
+      <workItem from="1759604025978" duration="14098000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />

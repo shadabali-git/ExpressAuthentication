@@ -1,11 +1,11 @@
 import GameModel from "../../Models/tictactoe/game.model";
 
-const CreateGame = async (userId:string)=>{
-    try{
-        const already=await GameModel.findOne({userId:userId});
-        if(already) {
-          return true;
-        }else {
+const CreateGame = async (userId: string) => {
+    try {
+        const already = await GameModel.findOne({userId: userId});
+        if (already) {
+            return true;
+        } else {
             await GameModel.create(
                 {
                     userId: userId,
@@ -14,7 +14,7 @@ const CreateGame = async (userId:string)=>{
         }
 
         return true;
-    }catch(err){
+    } catch (err) {
         console.error(err);
         return false;
     }

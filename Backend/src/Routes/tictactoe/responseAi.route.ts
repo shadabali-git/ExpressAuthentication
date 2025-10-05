@@ -1,6 +1,6 @@
 import {Router} from 'express'
 
-import MachineReponse from "../../Controllers/tictactoe/MachineVsHuman.controller";
+import MachineReponse from "../../Controllers/tictactoe/BotVsHuman.controller";
 const router = Router();
 
 

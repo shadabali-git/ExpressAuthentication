@@ -106,4 +106,4 @@ const getBestMove = (board: Board): [number, number] => {
 
     return bestMove;
 };
-export { getBestMove };
+export { getBestMove ,checkWin , isFull };
