@@ -1,17 +1,20 @@
 import {useState} from "react";
+import {useParams} from 'react-router-dom';
 import axios from "axios";
 
 const Temp = () => {
+
+    const gameId= useParams();
+
+    console.log(gameId.gameplay);
 
     const [board, setBoard] = useState<number[]>([0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
     const callApi = async (index: number) => {
         try {
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/tictacktoe/ai`,
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/tictacktoe/bot/${gameId.gameplay}`,
                 {
-                    userId: "68dc70ebea2a5e84d7db57e5",
                     index:index,
-                    status: "init"
                 },
                 {headers: {"Content-Type": "application/json"}});
 
