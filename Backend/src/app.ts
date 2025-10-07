@@ -3,7 +3,6 @@ import bodyparser from 'body-parser'
 import {mongo} from './config/mongo';
 import cors from 'cors'
 import {PORT} from './config/environment'
-
 // routes
 import MasterRoute from './Routes/Master.route'
 import AuthGoogleRoute from "./Routes/GoogleOAuth/AuthGoogle.route";
@@ -27,7 +26,7 @@ app.use(cors({
 app.use(bodyparser.urlencoded({extended: true}));
 
 // routes
-app.use("/api", MasterRoute);
+app.use("/api/v1", MasterRoute);
 app.use("/api/auth/google", AuthGoogleRoute);
 app.use("/api/auth/google/callback", AuthGoogleCallbackRoute);
 

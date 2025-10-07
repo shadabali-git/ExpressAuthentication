@@ -7,6 +7,10 @@ const createUserService = async (data: UserType) => {
     try {
         let newData = { ...data }
 
+        if(!newData.email || !newData.password) {
+            return null;
+        }
+
         // Only hash password if it exists (for regular signup)
         if (data.password) {
             const NewPassword = await hashPassword(data.password)

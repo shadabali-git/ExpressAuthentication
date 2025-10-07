@@ -3,6 +3,7 @@ import Layout from "@/components/Design/Layout.tsx";
 import "@radix-ui/themes/styles.css";
 import LandingPage from "@/components/Design/LandingPage.tsx";
 import HomeScreen from "@/Screens/HomeScreen.tsx";
+import Temp from "@/components/Temp"
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
                     <Route path="contact"
                            element={<h2> Contact page is this </h2>}></Route>
                 </Route>
+                <Route path="/gameplay" element={<Temp/>}/>
                 <Route path="*" element={<h1> 404 Not Found </h1>}/>
+
 
 
             </Routes>
