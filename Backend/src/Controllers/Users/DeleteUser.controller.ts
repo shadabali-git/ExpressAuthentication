@@ -3,7 +3,8 @@ import deleteUserService from "../../services/Authentication/DeleteUser.service"
 
 const DeleteUserController = async (req: Request, res: Response) => {
     try {
-        const {userId} = req.body();
+
+        const userId = (req as any).userId;
 
         await deleteUserService(userId);
         res.status(200).json({message: "Deleted Successfully"})
