@@ -2,6 +2,7 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import Loader from "@/components/Design/Loader.tsx";
 import Swal from 'sweetalert2'
+import axios from "axios";
 
 const HomeScreen: React.FC = () => {
     const navigate = useNavigate();
@@ -20,6 +21,38 @@ const HomeScreen: React.FC = () => {
 
         });
     };
+
+
+    const createGame= async ()=>{
+        const token= localStorage.getItem('token');
+        try{
+            if(!token){
+                alert("unvalid called")
+                return;
+            }
+            const response = await axios.post(
+                `${import.meta.env.VITE_BACKEND_URL}/api/v1/tictacktoe/create`,
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            if(!response){
+                alert("unvalid called")
+                return;
+            }
+            if(!response.data.gameId){
+                alert("unable to create a game")
+                return;
+            }
+            navigate(`/tac/${response.data.gameId}`);
+
+        }catch(err){
+            console.error(err);
+        }
+    }
 
 
     if(isLoading){
@@ -44,7 +77,7 @@ const HomeScreen: React.FC = () => {
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2" onClick={()=>showAlert("Wait few days","Working on this part","success")} >
                             Play Online
                         </button>
-                        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={()=>navigate('/gameplay')}>
+                        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={createGame}>
                             Play Offline
                         </button>
                     </div>

@@ -21,7 +21,7 @@ function App() {
                     <Route path="contact"
                            element={<h2> Contact page is this </h2>}></Route>
                 </Route>
-                <Route path="/gameplay" element={<Temp/>}/>
+                <Route path="/tac/:gameplay" element={<Temp/>}/>
                 <Route path="*" element={<h1> 404 Not Found </h1>}/>
 
 
