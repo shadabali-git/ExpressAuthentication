@@ -6,16 +6,21 @@ export type Board = [[Player, Player, Player], [Player, Player, Player], [Player
 interface gameType {
     userId: Types.ObjectId,
     gameType: string,
+    opponentId: Types.ObjectId,
     board: Board,
     currentTurn: 1 | 2,
-    status: "pending" | "completed" | "init";
-    winner: 0 | 1 | 2 | 3 ;
+    winner: 0 | 1 | 2 | 3;
     lastUpdate: Date
 }
 
 const gameSchema: Schema = new Schema<gameType>({
 
     userId: {
+        type: Schema.Types.ObjectId,
+        ref: "user",
+        required: true
+    },
+    opponentId: {
         type: Schema.Types.ObjectId,
         ref: "user",
         required: true
@@ -37,11 +42,6 @@ const gameSchema: Schema = new Schema<gameType>({
         enum: [1, 2],
         default: 1
     },
-    status: {
-        type: String,
-        enum: ["pending", "completed", "init"],
-        default: "init"
-    },
     winner: {
         type: Number,
         enum: [0, 1, 2, 3],
@@ -53,5 +53,5 @@ const gameSchema: Schema = new Schema<gameType>({
     }
 })
 
-const GameModel= mongoose.model<gameType>("TicTacToeGame", gameSchema);
+const GameModel = mongoose.model<gameType>("TicTacToeGame", gameSchema);
 export default GameModel;

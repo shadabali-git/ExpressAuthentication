@@ -14,6 +14,7 @@ const UserSchema: Schema = new Schema<UserType>({
     },
     username: {
         type: String,
+        unique: false,
         required: true,
         default: 'incognito',
     },
@@ -42,6 +43,7 @@ const UserSchema: Schema = new Schema<UserType>({
     },
     googleId: {
         type: String,
+        unique: false,
         required: false,
         default: "NA"
     },

@@ -1,22 +1,18 @@
 import GameModel from "../../Models/tictactoe/game.model";
+import {Types} from "mongoose";
 
-const CreateGame = async (userId: string) => {
+const CreateGame = async (userId: string,opponentId:string|null): Promise<Types.ObjectId | null> => {
     try {
-        const already = await GameModel.findOne({userId: userId});
-        if (already) {
-            return true;
-        } else {
-            await GameModel.create(
-                {
-                    userId: userId,
-                    lastUpdate: Date.now()
-                });
-        }
-
-        return true;
+        const response = await GameModel.create(
+            {
+                userId: userId,
+                opponentId:opponentId || "68e48ee25e1a657ca767460d",
+                lastUpdate: Date.now()
+            });
+        return response?._id || null;
     } catch (err) {
         console.error(err);
-        return false;
+        return null;
     }
 
 }

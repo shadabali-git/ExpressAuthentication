@@ -1,4 +1,4 @@
-import { Board, Player } from "../../Models/tictactoe/game.model";
+import { Board } from "../../Models/tictactoe/game.model";
 
 const HumanMoveService = (
     x: number,
