@@ -1,5 +1,3 @@
-import React from "react";
-
 function Puzzle() {
     return (
         <div className="border rounded-lg p-4 shadow-md"> {/* Card for Solve Puzzle */}
