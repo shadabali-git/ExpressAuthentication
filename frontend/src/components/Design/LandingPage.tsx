@@ -12,21 +12,6 @@ const LandingPage: React.FC = () => {
     const [open, setOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(false);
 
-
-    const showAlert = (title: string, message: string, icon: "success" | "error") => {
-        Swal.fire({
-            title: title,
-            text: message,
-            icon: icon,
-            timer: 3000,
-            timerProgressBar: true,
-            showConfirmButton: true,
-            allowOutsideClick: true,
-            allowEscapeKey: true,
-
-
-        });
-    };
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         const token = params.get("token");
@@ -42,8 +27,6 @@ const LandingPage: React.FC = () => {
                 timer: 1500,
                 showConfirmButton: false,
             }).then(() => navigate("/Dashboard", {replace: true}));
-        } else {
-            showAlert("Login Crashed", "Try Again ! Contact shad46243@gmail.com", "error")
         }
     }, [location]);
 

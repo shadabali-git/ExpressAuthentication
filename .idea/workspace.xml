@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11804f17-73f4-4537-ad34-71f78185ee81" name="Changes" comment="merged">
-      <change afterPath="$PROJECT_DIR$/Backend/src/Controllers/tictactoe/CreateNewBotGame.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/game-console.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/tictactoe/BotGame.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/tictactoe/Human1v1.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/CreateUser.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Controllers/Authentication/CreateUser.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Controllers/Users/DeleteUser.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Controllers/Users/DeleteUser.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Controllers/tictactoe/BotVsHuman.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Controllers/tictactoe/BotVsHuman.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Models/User.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Models/User.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Models/tictactoe/game.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Models/tictactoe/game.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Routes/AuthenticationRoutes/DeleteUser.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Routes/AuthenticationRoutes/DeleteUser.route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Routes/Master.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Routes/Master.route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Routes/tictactoe/responseAi.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Routes/tictactoe/responseAi.route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/middlewares/verifyToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/middlewares/verifyToken.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/services/Authentication/createUser.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/Authentication/createUser.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/services/ticktactoe/HumanMove.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/ticktactoe/HumanMove.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/services/ticktactoe/createNewGame.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/services/ticktactoe/createNewGame.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/Board.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Design/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Temp.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;shadab&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/shad4/WebstormProjects/AuthenticationExpress&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\shad4\\WebstormProjects\\AuthenticationExpress\\Backend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "shadab",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/shad4/WebstormProjects/AuthenticationExpress/frontend/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\shad4\\WebstormProjects\\AuthenticationExpress\\Backend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\shad4\WebstormProjects\AuthenticationExpress\frontend\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\shad4\WebstormProjects\AuthenticationExpress\frontend\src\components\Design" />
       <recent name="C:\Users\shad4\WebstormProjects\AuthenticationExpress\frontend\src\assets" />
@@ -159,7 +158,9 @@
       <workItem from="1759604025978" duration="14918000" />
       <workItem from="1759694070499" duration="214000" />
       <workItem from="1759795505501" duration="6224000" />
-      <workItem from="1759804975881" duration="5384000" />
+      <workItem from="1759804975881" duration="9843000" />
+      <workItem from="1759821121795" duration="3797000" />
+      <workItem from="1759880211094" duration="5046000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication In Typescript Added">
       <option name="closed" value="true" />

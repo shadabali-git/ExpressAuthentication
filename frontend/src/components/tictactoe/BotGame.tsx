@@ -2,7 +2,7 @@ import {useState} from "react";
 import {useParams} from 'react-router-dom';
 import axios from "axios";
 
-const Temp = () => {
+const BotGame = () => {
 
     const gameId= useParams();
 
@@ -11,6 +11,12 @@ const Temp = () => {
     const [board, setBoard] = useState<number[]>([0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
     const callApi = async (index: number) => {
+        if(board[index]==0){
+            const newBoard = [...board];
+            newBoard[index] = 1;
+            setBoard(newBoard);
+        }
+
         try {
             const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/tictacktoe/bot/${gameId.gameplay}`,
                 {
@@ -42,7 +48,6 @@ const Temp = () => {
 
     return (
         <>
-            <h2> Playing game here </h2>
 
             <div className="bg-gray-500 w-[600px] h-[600px] grid grid-cols-3">
 
@@ -62,4 +67,4 @@ const Temp = () => {
     )
 }
 
-export default Temp;
+export default BotGame;

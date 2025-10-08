@@ -3,7 +3,8 @@ import Layout from "@/components/Design/Layout.tsx";
 import "@radix-ui/themes/styles.css";
 import LandingPage from "@/components/Design/LandingPage.tsx";
 import HomeScreen from "@/Screens/HomeScreen.tsx";
-import Temp from "@/components/Temp"
+import BotGame from "@/components/tictactoe/BotGame.tsx"
+import Human1v1 from "@/components/tictactoe/Human1v1.tsx";
 
 function App() {
 
@@ -20,10 +21,12 @@ function App() {
                            element={<h2> Service page is this </h2>}></Route>
                     <Route path="contact"
                            element={<h2> Contact page is this </h2>}></Route>
-                </Route>
-                <Route path="/tac/:gameplay" element={<Temp/>}/>
-                <Route path="*" element={<h1> 404 Not Found </h1>}/>
+                    <Route path="bot/:gameplay" element={<BotGame/>}></Route>
+                    <Route path="v/:gameplay" element={<Human1v1/>}></Route>
 
+                </Route>
+
+                <Route path="*" element={<h1> 404 Not Found </h1>}/>
 
 
             </Routes>
